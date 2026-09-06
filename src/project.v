@@ -23,7 +23,7 @@ module tt_um_tomvdsch_tiny32_soc (
         .ENABLE_COUNTERS(1),
         .ICACHE_WORDS(2),
         .ICACHE_LINE_BITS(1),
-        .SYS_CLK_HZ(32000000)
+        .SYS_CLK_HZ(25000000)
     ) u_soc (
         .clk(clk),
         .rst_n(rst_n),

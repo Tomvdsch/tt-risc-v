@@ -375,7 +375,7 @@ module tiny32_soc #(
         .bus_addr(cpu_mem_addr[15:0]),.bus_wdata(cpu_mem_wdata),.bus_wstrb(cpu_mem_wstrb),
         .bus_rdata(clint_rdata),.irq_software(irq_software),.irq_timer(irq_timer),.mtime_value(mtime_value));
 
-    wire [15:0] plic_sources;
+    wire [7:0] plic_sources;
     wire [31:0] plic_rdata;
     plic u_plic(.clk(clk),.rst_n(runtime_rst_n),.bus_valid(plic_valid),.bus_addr(cpu_mem_addr[21:0]),
         .bus_wdata(cpu_mem_wdata),.bus_wstrb(cpu_mem_wstrb),.bus_rdata(plic_rdata),
@@ -453,7 +453,7 @@ module tiny32_soc #(
         .bus_wdata(cpu_mem_wdata),.bus_wstrb(cpu_mem_wstrb),.bus_rdata(wdog_rdata),
         .irq(wdog_irq),.reset_pulse(watchdog_reset_pulse));
 
-    assign plic_sources = {9'd0,wdog_irq,timer1_irq,timer0_irq,gpio_irq,i2c_irq,spi_irq,uart_irq};
+    assign plic_sources = {1'd0,wdog_irq,timer1_irq,timer0_irq,gpio_irq,i2c_irq,spi_irq,uart_irq};
 
     // System information block: intentionally mostly read-only.
     localparam [3:0] ICACHE_WORDS_INFO = ICACHE_WORDS;

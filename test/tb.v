@@ -49,11 +49,6 @@ module tb;
         .rst_n(rst_n)
     );
 
-`ifndef GL_TEST
-    defparam user_project.u_soc.u_psram.POWERUP_WAIT_CYCLES = 4;
-    defparam user_project.u_soc.u_psram.RESET_WAIT_CYCLES = 4;
-`endif
-
     w25q64_model #(.MEM_BYTES(4096)) flash (
         .cs_n(uo_out[0]), .sck(uo_out[2]), .mosi(uo_out[1]), .miso(flash_miso)
     );

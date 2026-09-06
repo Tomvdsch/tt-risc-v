@@ -18,7 +18,7 @@ module tt_um_tomvdsch_tiny32_soc (
 
     tiny32_soc #(
         .ENABLE_M(1),
-        .ENABLE_A(1),
+        .ENABLE_A(0),
         .ENABLE_U(0),
         .ENABLE_COUNTERS(0),
         .ICACHE_WORDS(2),

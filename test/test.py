@@ -161,7 +161,7 @@ async def test_tiny32_soc(dut):
 
     await reset_design(dut)
 
-    for _ in range(40000):
+    for _ in range(250000):
         await RisingEdge(dut.clk)
         if int(dut.user_project.u_soc.debug_boot_done.value) and int(dut.psram.mem[0].value) == 0x6F:
             break

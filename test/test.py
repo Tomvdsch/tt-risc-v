@@ -53,9 +53,11 @@ def cpu_program():
     emit(amo(0x18, 3, 1, 11)); emit(s_type(0x20, 11, 1))
     emit(i_type(-1, 0, 0, 3))
     emit(amo(0x1C, 3, 1, 12)); emit(s_type(0x24, 12, 1))
-    emit(amo(0x02, 0, 1, 13)); emit(s_type(0x28, 13, 1))
+    emit(amo(0x02, 0, 1, 13))
+    emit(i_type(0, 13, 0, 16))
     emit(i_type(1, 13, 0, 13))
-    emit(amo(0x03, 13, 1, 14)); emit(s_type(0x2C, 14, 1))
+    emit(amo(0x03, 13, 1, 14))
+    emit(s_type(0x28, 16, 1)); emit(s_type(0x2C, 14, 1))
     emit(amo(0x03, 13, 1, 15)); emit(s_type(0x30, 15, 1))
 
     emit(i_type(-7, 0, 0, 16))

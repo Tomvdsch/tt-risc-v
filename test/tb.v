@@ -111,7 +111,7 @@ module tb;
     reg [21:0] plic_addr;
     reg [31:0] plic_wdata;
     reg [3:0] plic_wstrb;
-    reg [15:0] plic_sources;
+    reg [7:0] plic_sources;
     wire [31:0] plic_rdata;
     wire plic_irq;
     plic plic_unit (

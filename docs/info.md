@@ -248,13 +248,3 @@ observed on SCL.
 | `0x0C` | FEED | Write `0x51F15EED` |
 | `0x10` | STATUS | expired |
 
-## Software targets
-
-Zephyr is the first intended operating system. The hardware includes the basic
-pieces needed for a Machine-mode port, but the repository does not yet contain
-an upstream-quality Zephyr board/SoC port. Do not claim that Tiny32 runs Zephyr
-until a selected Zephyr release builds, boots, reaches its idle thread, and
-passes UART, timer, interrupt, and memory tests on hardware.
-
-No-MMU Linux is not a tapeout target for this configuration. Tiny32 has no
-Supervisor mode, User mode, atomics, MMU, PMP, Linux device tree, or drivers.

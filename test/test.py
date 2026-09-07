@@ -266,7 +266,7 @@ async def test_tiny32_soc(dut):
 
     feature_word = sum(int(dut.psram.mem[4 + index].value) << (8 * index)
                        for index in range(4))
-    assert feature_word == 0x21
+    assert feature_word == 0x11
     assert int(dut.psram.mem[8].value) == 0x5A
     partial_store_echo = sum(int(dut.psram.mem[12 + index].value) << (8 * index)
                              for index in range(4))

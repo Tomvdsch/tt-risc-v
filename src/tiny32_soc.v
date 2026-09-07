@@ -3,7 +3,7 @@ module tiny32_soc #(
     parameter ENABLE_A = 0,
     parameter ENABLE_U = 0,
     parameter ENABLE_COUNTERS = 0,
-    parameter ICACHE_WORDS = 2,
+    parameter ICACHE_WORDS = 1,
     parameter SYS_CLK_HZ = 25000000,
     parameter WATCHDOG_RESETS_CPU = 1,
     parameter RESET_VECTOR = 32'h2000_0000

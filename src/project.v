@@ -21,7 +21,7 @@ module tt_um_tomvdsch_tiny32_soc (
         .ENABLE_A(0),
         .ENABLE_U(0),
         .ENABLE_COUNTERS(0),
-        .ENABLE_SPI(0),
+        .ENABLE_SPI(1),
         .ENABLE_I2C(1),
         .ENABLE_TIMER1(0),
         .ENABLE_WATCHDOG(0),

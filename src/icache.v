@@ -35,7 +35,8 @@ module icache #(
     reg [31:0] line [0:LINE_WORDS-1];
 
     wire [31:0] request_base = cpu_addr & LINE_MASK;
-    wire [INDEX_BITS-1:0] request_index = cpu_addr[INDEX_BITS+1:2];
+    wire [INDEX_BITS-1:0] request_index = (LINE_WORDS <= 1) ?
+        {INDEX_BITS{1'b0}} : cpu_addr[INDEX_BITS+1:2];
 
     integer i;
     always @(posedge clk or negedge rst_n) begin

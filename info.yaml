@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "Tiny32 RV32IM Zephyr-target SoC"      # Project title
+  title:        "Tiny32 RV32I Zephyr-target SoC"      # Project title
   author:       "Tomvdsch"      # Your name
   discord:      "tom.vds"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "RV32IM M-mode SoC with software boot, external flash and PSRAM, UART, GPIO and timers"      # One line description of what your project does
+  description:  "RV32I SoC with software boot, external flash and PSRAM, UART, GPIO and timers"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     25000000       # Clock frequency in Hz (or 0 if not applicable)
 

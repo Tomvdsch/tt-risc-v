@@ -25,7 +25,7 @@ module tt_um_tomvdsch_tiny32_soc (
         .ENABLE_I2C(1),
         .ENABLE_TIMER1(1),
         .ENABLE_WATCHDOG(0),
-        .PWM_CHANNELS(4),
+        .PWM_CHANNELS(3),
         .ICACHE_WORDS(1),
         .SYS_CLK_HZ(25000000)
     ) u_soc (
